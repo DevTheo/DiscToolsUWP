@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8983308-703E-4642-A8ED-A810FB5759FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DiscUtils</RootNamespace>
+    <AssemblyName>DiscToolsLibUWP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buffer.cs" />
+    <Compile Include="BufferStream.cs" />
+    <Compile Include="BuilderBufferExtent.cs" />
+    <Compile Include="BuilderExtent.cs" />
+    <Compile Include="BuilderSparseStreamExtent.cs" />
+    <Compile Include="BuilderStreamExtent.cs" />
+    <Compile Include="BuiltStream.cs" />
+    <Compile Include="ChsAddress.cs" />
+    <Compile Include="ClusterMap.cs" />
+    <Compile Include="Compatibility\AttributeUtil.cs" />
+    <Compile Include="Compatibility\CompatibilityExtensions.cs" />
+    <Compile Include="Compatibility\MarshalByRefObject.cs" />
+    <Compile Include="Compatibility\SerializableAttribute.cs" />
+    <Compile Include="Crc32.cs" />
+    <Compile Include="Crc32Algorithm.cs" />
+    <Compile Include="Crc32LittleEndian.cs" />
+    <Compile Include="DiscDirectoryInfo.cs" />
+    <Compile Include="DiscFileInfo.cs" />
+    <Compile Include="DiscFileLocator.cs" />
+    <Compile Include="DiscFileSystem.cs" />
+    <Compile Include="DiscFileSystemInfo.cs" />
+    <Compile Include="DiscFileSystemOptions.cs" />
+    <Compile Include="DiskImageBuilder.cs" />
+    <Compile Include="DiskImageFileSpecification.cs" />
+    <Compile Include="Fat\ClusterReader.cs" />
+    <Compile Include="Fat\ClusterStream.cs" />
+    <Compile Include="Fat\Directory.cs" />
+    <Compile Include="Fat\DirectoryEntry.cs" />
+    <Compile Include="Fat\FatAttributes.cs" />
+    <Compile Include="Fat\FatBuffer.cs" />
+    <Compile Include="Fat\FatFileStream.cs" />
+    <Compile Include="Fat\FatFileSystem.cs" />
+    <Compile Include="Fat\FatFileSystemOptions.cs" />
+    <Compile Include="Fat\FatType.cs" />
+    <Compile Include="Fat\FileAllocationTable.cs" />
+    <Compile Include="Fat\FileName.cs" />
+    <Compile Include="Fat\FileSystemFactory.cs" />
+    <Compile Include="FileLocator.cs" />
+    <Compile Include="FileSystemInfo.cs" />
+    <Compile Include="FileSystemParameters.cs" />
+    <Compile Include="FloppyDiskType.cs" />
+    <Compile Include="GenericDiskAdapterType.cs" />
+    <Compile Include="Geometry.cs" />
+    <Compile Include="GeometryTranslation.cs" />
+    <Compile Include="IBuffer.cs" />
+    <Compile Include="IByteArraySerializable.cs" />
+    <Compile Include="IClusterBasedFileSystem.cs" />
+    <Compile Include="IDiagnosticTraceable.cs" />
+    <Compile Include="IFileSystem.cs" />
+    <Compile Include="IMappedBuffer.cs" />
+    <Compile Include="InvalidFileSystemException.cs" />
+    <Compile Include="Iso9660\BaseVolumeDescriptor.cs" />
+    <Compile Include="Iso9660\BootDeviceEmulation.cs" />
+    <Compile Include="Iso9660\BootInitialEntry.cs" />
+    <Compile Include="Iso9660\BootValidationEntry.cs" />
+    <Compile Include="Iso9660\BootVolumeDescriptor.cs" />
+    <Compile Include="Iso9660\BootVolumeDescriptorRegion.cs" />
+    <Compile Include="Iso9660\BuildDirectoryInfo.cs" />
+    <Compile Include="Iso9660\BuildDirectoryMember.cs" />
+    <Compile Include="Iso9660\BuildFileInfo.cs" />
+    <Compile Include="Iso9660\BuildParameters.cs" />
+    <Compile Include="Iso9660\CDBuilder.cs" />
+    <Compile Include="Iso9660\CDReader.cs" />
+    <Compile Include="Iso9660\CommonVolumeDescriptor.cs" />
+    <Compile Include="Iso9660\DirectoryExtent.cs" />
+    <Compile Include="Iso9660\DirectoryRecord.cs" />
+    <Compile Include="Iso9660\ExtentStream.cs" />
+    <Compile Include="Iso9660\File.cs" />
+    <Compile Include="Iso9660\FileExtent.cs" />
+    <Compile Include="Iso9660\Iso9660Variant.cs" />
+    <Compile Include="Iso9660\IsoContext.cs" />
+    <Compile Include="Iso9660\IsoUtilities.cs" />
+    <Compile Include="Iso9660\PathTable.cs" />
+    <Compile Include="Iso9660\PathTableRecord.cs" />
+    <Compile Include="Iso9660\PrimaryVolumeDescriptor.cs" />
+    <Compile Include="Iso9660\PrimaryVolumeDescriptorRegion.cs" />
+    <Compile Include="Iso9660\ReaderDirectory.cs" />
+    <Compile Include="Iso9660\ReaderDirEntry.cs" />
+    <Compile Include="Iso9660\RockRidge\ChildLinkSystemUseEntry.cs" />
+    <Compile Include="Iso9660\RockRidge\FileTimeSystemUseEntry.cs" />
+    <Compile Include="Iso9660\RockRidge\PosixFileInfoSystemUseEntry.cs" />
+    <Compile Include="Iso9660\RockRidge\PosixNameSystemUseEntry.cs" />
+    <Compile Include="Iso9660\RockRidge\RockRidgeExtension.cs" />
+    <Compile Include="Iso9660\SupplementaryVolumeDescriptor.cs" />
+    <Compile Include="Iso9660\SupplementaryVolumeDescriptorRegion.cs" />
+    <Compile Include="Iso9660\Susp\ContinuationSystemUseEntry.cs" />
+    <Compile Include="Iso9660\Susp\ExtensionSelectSystemUseEntry.cs" />
+    <Compile Include="Iso9660\Susp\ExtensionSystemUseEntry.cs" />
+    <Compile Include="Iso9660\Susp\GenericSuspExtension.cs" />
+    <Compile Include="Iso9660\Susp\GenericSystemUseEntry.cs" />
+    <Compile Include="Iso9660\Susp\PaddingSystemUseEntry.cs" />
+    <Compile Include="Iso9660\Susp\SharingProtocolSystemUseEntry.cs" />
+    <Compile Include="Iso9660\Susp\SuspExtension.cs" />
+    <Compile Include="Iso9660\Susp\SuspRecords.cs" />
+    <Compile Include="Iso9660\Susp\SystemUseEntry.cs" />
+    <Compile Include="Iso9660\Susp\TerminatorSystemUseEntry.cs" />
+    <Compile Include="Iso9660\VfsCDReader.cs" />
+    <Compile Include="Iso9660\VolumeDescriptorRegion.cs" />
+    <Compile Include="Iso9660\VolumeDescriptorSetTerminator.cs" />
+    <Compile Include="Iso9660\VolumeDescriptorSetTerminatorRegion.cs" />
+    <Compile Include="IUnixFileSystem.cs" />
+    <Compile Include="IWindowsFileSystem.cs" />
+    <Compile Include="LogicalVolumeFactory.cs" />
+    <Compile Include="LogicalVolumeFactoryAttribute.cs" />
+    <Compile Include="LogicalVolumeInfo.cs" />
+    <Compile Include="MappedStream.cs" />
+    <Compile Include="Numbers.cs" />
+    <Compile Include="ObjectCache.cs" />
+    <Compile Include="Ownership.cs" />
+    <Compile Include="Partitions\BiosExtendedPartitionTable.cs" />
+    <Compile Include="Partitions\BiosPartitionedDiskBuilder.cs" />
+    <Compile Include="Partitions\BiosPartitionInfo.cs" />
+    <Compile Include="Partitions\BiosPartitionRecord.cs" />
+    <Compile Include="Partitions\BiosPartitionTable.cs" />
+    <Compile Include="Partitions\BiosPartitionTypes.cs" />
+    <Compile Include="Partitions\DefaultPartitionTableFactory.cs" />
+    <Compile Include="Partitions\GptEntry.cs" />
+    <Compile Include="Partitions\GptHeader.cs" />
+    <Compile Include="Partitions\GuidPartitionInfo.cs" />
+    <Compile Include="Partitions\GuidPartitionTable.cs" />
+    <Compile Include="Partitions\GuidPartitionTypes.cs" />
+    <Compile Include="Partitions\PartitionInfo.cs" />
+    <Compile Include="Partitions\PartitionTable.cs" />
+    <Compile Include="Partitions\PartitionTableFactory.cs" />
+    <Compile Include="Partitions\PartitionTableFactoryAttribute.cs" />
+    <Compile Include="Partitions\WellKnownPartitionType.cs" />
+    <Compile Include="PhysicalVolumeInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PumpProgressEventArgs.cs" />
+    <Compile Include="Raw\Disk.cs" />
+    <Compile Include="Raw\DiskFactory.cs" />
+    <Compile Include="Raw\DiskImageFile.cs" />
+    <Compile Include="ReparsePoint.cs" />
+    <Compile Include="Sizes.cs" />
+    <Compile Include="SparseMemoryBuffer.cs" />
+    <Compile Include="SparseMemoryStream.cs" />
+    <Compile Include="SparseStream.cs" />
+    <Compile Include="Range.cs" />
+    <Compile Include="StreamBuffer.cs" />
+    <Compile Include="StreamBuilder.cs" />
+    <Compile Include="StreamExtent.cs" />
+    <Compile Include="StreamPump.cs" />
+    <Compile Include="SubStream.cs" />
+    <Compile Include="UnixFilePermissions.cs" />
+    <Compile Include="UnixFileSystemInfo.cs" />
+    <Compile Include="UnixFileType.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="Vfs\IVfsDirectory.cs" />
+    <Compile Include="Vfs\IVfsFile.cs" />
+    <Compile Include="Vfs\IVfsSymlink.cs" />
+    <Compile Include="Vfs\VfsContext.cs" />
+    <Compile Include="Vfs\VfsDirEntry.cs" />
+    <Compile Include="Vfs\VfsFileSystem.cs" />
+    <Compile Include="Vfs\VfsFileSystemFacade.cs" />
+    <Compile Include="Vfs\VfsFileSystemFactory.cs" />
+    <Compile Include="Vfs\VfsFileSystemFactoryAttribute.cs" />
+    <Compile Include="Vfs\VfsFileSystemInfo.cs" />
+    <Compile Include="Vfs\VfsReadOnlyFileSystem.cs" />
+    <Compile Include="VirtualDisk.cs" />
+    <Compile Include="VirtualDiskClass.cs" />
+    <Compile Include="VirtualDiskExtent.cs" />
+    <Compile Include="VirtualDiskFactory.cs" />
+    <Compile Include="VirtualDiskFactoryAttribute.cs" />
+    <Compile Include="VirtualDiskLayer.cs" />
+    <Compile Include="VirtualDiskParameters.cs" />
+    <Compile Include="VirtualDiskTransport.cs" />
+    <Compile Include="VirtualDiskTransportAttribute.cs" />
+    <Compile Include="VirtualDiskTypeInfo.cs" />
+    <Compile Include="VolumeInfo.cs" />
+    <Compile Include="VolumeManager.cs" />
+    <Compile Include="WindowsFileInformation.cs" />
+    <Compile Include="WrappingMappedStream.cs" />
+    <Compile Include="ZeroStream.cs" />
+    <EmbeddedResource Include="Properties\DiscToolsLibUWP.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApplePartitionMap\" />
+    <Folder Include="Archives\" />
+    <Folder Include="BootConfig\" />
+    <Folder Include="Compression\" />
+    <Folder Include="Dmg\" />
+    <Folder Include="Ext\" />
+    <Folder Include="HfsPlus\" />
+    <Folder Include="Iscsi\" />
+    <Folder Include="LogicalDiskManager\" />
+    <Folder Include="Net\" />
+    <Folder Include="Nfs\" />
+    <Folder Include="Ntfs\" />
+    <Folder Include="OpticalDiscSharing\" />
+    <Folder Include="Optical\" />
+    <Folder Include="Sdi\" />
+    <Folder Include="SquashFs\" />
+    <Folder Include="Udf\" />
+    <Folder Include="Vdi\" />
+    <Folder Include="Vhdx\" />
+    <Folder Include="Vhd\" />
+    <Folder Include="Vmdk\" />
+    <Folder Include="Wim\" />
+    <Folder Include="Xva\" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
